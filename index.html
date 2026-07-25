@@ -6,30 +6,116 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Курс подготовки к экзамену риэлтера</title>
 <style>
-  :root { color-scheme: light; }
-  * { box-sizing: border-box; margin: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-         background: #f6f8fb; color: #1c2733; display: flex; min-height: 100vh;
-         align-items: center; justify-content: center; padding: 24px; }
-  .card { background: #fff; border: 1px solid #e3e9f1; border-radius: 16px;
-          padding: 40px 36px; max-width: 480px; width: 100%;
-          box-shadow: 0 8px 30px rgba(28, 39, 51, .06); text-align: center; }
-  h1 { font-size: 22px; margin-bottom: 8px; }
-  p.sub { color: #5b6b7c; font-size: 14px; margin-bottom: 28px; line-height: 1.5; }
-  a.btn { display: block; padding: 14px 18px; margin: 10px 0; border-radius: 10px;
-          text-decoration: none; font-weight: 600; font-size: 16px; }
-  a.main { background: #2f6fed; color: #fff; }
-  a.alt  { background: #eef3fb; color: #2f6fed; }
-  p.note { margin-top: 24px; color: #8a97a5; font-size: 12.5px; line-height: 1.5; }
+  :root{ color-scheme: light; --ink:#12202e; --ink2:#4a5b6d; --ink3:#7b8896;
+         --line:#e3e9f1; --bg:#f4f7fb; --card:#fff; --accent:#2f6fed; --accent-soft:#eef3fd;
+         --ok:#0f7b4f; --ok-soft:#e8f6ef; }
+  *{ box-sizing:border-box; margin:0 }
+  body{ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+        background:var(--bg); color:var(--ink); line-height:1.55; padding:28px 16px 56px }
+  .wrap{ max-width:640px; margin:0 auto }
+  .card{ background:var(--card); border:1px solid var(--line); border-radius:18px;
+         padding:34px 30px; box-shadow:0 10px 34px rgba(18,32,46,.07) }
+  h1{ font-size:27px; line-height:1.22; letter-spacing:-.02em; margin-bottom:12px }
+  .sub{ color:var(--ink2); font-size:16px; margin-bottom:22px }
+  .stats{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:24px }
+  .stat{ flex:1 1 120px; background:var(--accent-soft); border-radius:12px; padding:12px 14px }
+  .stat b{ display:block; font-size:21px; letter-spacing:-.02em }
+  .stat span{ font-size:12.5px; color:var(--ink2) }
+  a.btn{ display:block; padding:15px 18px; margin:10px 0; border-radius:12px; text-align:center;
+         text-decoration:none; font-weight:650; font-size:16px; transition:transform .06s ease }
+  a.btn:active{ transform:scale(.99) }
+  a.main{ background:var(--accent); color:#fff }
+  a.alt{ background:var(--accent-soft); color:var(--accent) }
+  .hint{ margin-top:14px; color:var(--ink3); font-size:12.5px; text-align:center }
+  section{ margin-top:26px }
+  h2{ font-size:15px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink3);
+      margin-bottom:12px; font-weight:700 }
+  ul{ list-style:none; padding:0; display:grid; gap:12px }
+  li b{ display:block; font-size:15.5px }
+  li span{ color:var(--ink2); font-size:14.5px }
+  ol{ margin:0; padding-left:20px; display:grid; gap:8px; color:var(--ink2); font-size:14.5px }
+  ol b{ color:var(--ink) }
+  details{ border-top:1px solid var(--line); padding:12px 0 }
+  details:last-of-type{ border-bottom:1px solid var(--line) }
+  summary{ cursor:pointer; font-weight:600; font-size:15px; list-style:none }
+  summary::-webkit-details-marker{ display:none }
+  summary::before{ content:"＋ "; color:var(--accent); font-weight:700 }
+  details[open] summary::before{ content:"− " }
+  details p{ color:var(--ink2); font-size:14.5px; padding-top:8px }
+  .badge{ display:inline-block; background:var(--ok-soft); color:var(--ok); font-size:12.5px;
+          font-weight:650; border-radius:999px; padding:5px 11px; margin-bottom:14px }
+  footer{ margin-top:26px; text-align:center; color:var(--ink3); font-size:12.5px }
 </style>
 </head>
 <body>
+<div class="wrap">
   <div class="card">
-    <h1>Курс подготовки к экзамену риэлтера (тестовый)</h1>
-    <a class="btn main" href="kurs.html">📚 Открыть курс</a>
-    <a class="btn alt" href="trener.html">🎯 Открыть тренажёр</a>
-    <p class="note">Доступ по паролю — его выдаёт владелец курса.<br>
-       Первая загрузка курса — до полуминуты, дальше быстрее.</p>
+    <span class="badge">Проверено по действующим законам · июль 2026</span>
+    <h1>Сдать экзамен риэлтера с первого раза</h1>
+    <p class="sub">Весь экзаменационный минимум разобран по темам: что спрашивают, как звучит
+       норма и на чём чаще всего валят. Плюс тренажёр с вопросами прошлых экзаменов.</p>
+
+    <div class="stats">
+      <div class="stat"><b>13</b><span>разделов программы</span></div>
+      <div class="stat"><b>91</b><span>урок с разбором</span></div>
+      <div class="stat"><b>604</b><span>вопроса в уроках</span></div>
+    </div>
+
+    <a class="btn main" href="kurs.html">Открыть курс</a>
+    <a class="btn alt" href="trener.html">Тренажёр: 618 вопросов</a>
+    <p class="hint">Доступ по паролю — его выдаёт владелец курса.
+       Первая загрузка курса до полуминуты, дальше мгновенно.</p>
+
+    <section>
+      <h2>Что внутри</h2>
+      <ul>
+        <li><b>Только действующее право</b><span>Каждая норма сверена с первоисточником.
+            Там, где закон изменился, показано «было — стало»: например, заказ карточки риэлтера
+            теперь пять рабочих дней вместо десяти.</span></li>
+        <li><b>Ловушки, а не пересказ закона</b><span>В каждом уроке отдельно вынесено то, на чём
+            путаются: похожие сроки, «один год против трёх», формулировки-близнецы в вариантах
+            ответа.</span></li>
+        <li><b>Вопросы с пояснением</b><span>После каждого урока — вопросы по теме и объяснение,
+            почему верен именно этот вариант.</span></li>
+        <li><b>Первоисточник под рукой</b><span>Под каждым уроком раскрывается полный текст по
+            теме — если хочется прочитать дословно.</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Как заниматься</h2>
+      <ol>
+        <li><b>Выбираешь раздел</b> — от гражданского права до налогов и ответственности.</li>
+        <li><b>Читаешь урок</b> — суть, разбор нюансов, короткий блок «запомнить».</li>
+        <li><b>Проверяешь себя</b> — вопросы в конце урока и общий тренажёр по всему банку.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Частые вопросы</h2>
+      <details><summary>Откуда взяты вопросы?</summary>
+        <p>Это вопросы, которые встречались на аттестационном экзамене и в учебном тестировании.
+           Там, где ключ в исходном тесте разошёлся с действующей редакцией закона, вопрос помечен
+           значком «сверить» и рядом объяснено, как правильно сейчас.</p></details>
+      <details><summary>Насколько материал актуален?</summary>
+        <p>Курс сверялся с действующими редакциями кодексов и законов в июле 2026 года, включая
+           изменения, вступившие в силу этой весной и летом. Разделы, где законодательство
+           обновилось, переписаны по новым актам.</p></details>
+      <details><summary>Что за тренажёр и чем он отличается от курса?</summary>
+        <p>Курс — это чтение по темам с разбором. Тренажёр — прогон вопросов подряд: быстро
+           понять, где провал, и вернуться к нужному разделу.</p></details>
+      <details><summary>Нужно ли что-то устанавливать?</summary>
+        <p>Нет. Всё работает в браузере, в том числе на телефоне. Ничего не скачивается,
+           регистрация не нужна.</p></details>
+      <details><summary>Почему вход по паролю?</summary>
+        <p>Курс пока закрытый: доступ выдаётся точечно. Никакие ваши данные страница не собирает
+           и никуда не отправляет — прогресс хранится только в вашем браузере.</p></details>
+      <details><summary>Сколько времени занимает подготовка?</summary>
+        <p>Зависит от базы. Разумный темп — раздел в день с прогоном вопросов; тогда весь курс
+           проходится примерно за две недели, а тренажёр остаётся для повторения.</p></details>
+    </section>
   </div>
+  <footer>Учебный материал. Не является юридической консультацией.</footer>
+</div>
 </body>
 </html>
